@@ -23,7 +23,7 @@ const SignUp = () => {
 
   let navigate = useNavigate()
   let location = useLocation();
-  let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/dashboard";
 
 
   let singInError

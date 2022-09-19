@@ -3,7 +3,7 @@ import useProducts from '../../Hook/useProducts';
 import ProductDetails from './ProductDetails';
 
 const Dashboard = () => {
-    const [products, setProducts] = useProducts();
+    const [products] = useProducts();
 
     console.log(products);
     return (
@@ -13,7 +13,7 @@ const Dashboard = () => {
                     <div className="form-control data-svelte-search">
                         <input
                             type="text"
-                            placeholder="Type to search..."
+                            placeholder="Type to Search..."
                             className="input px-7 py-2 placeholder-slate-300 text-white bg-violet-700 hover:border-none border-none focus:ring-0 focus:ring-offset-0 text-md"
                         />
                     </div>

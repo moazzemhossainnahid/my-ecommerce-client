@@ -11,7 +11,6 @@ const Reset = () => {
     useSendPasswordResetEmail(auth);
     const {
         register,
-        handleSubmit,
         getValues,
         formState: { errors },
       } = useForm();
