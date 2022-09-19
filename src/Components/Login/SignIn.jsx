@@ -26,7 +26,7 @@ const SignIn = () => {
   useEffect(() => {
     if (user) {
       (async () => {
-        const { data } = await axios.put(`http://localhost:5000/user`, {
+        const { data } = await axios.put(`https://my-ecommerce-nh.herokuapp.com/user`, {
           name: user?.user?.displayName,
           email: user?.user?.email,
         });

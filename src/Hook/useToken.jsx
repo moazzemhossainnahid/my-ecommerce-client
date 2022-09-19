@@ -14,7 +14,7 @@ const UseToken = (user) => {
             joiningDate: date
         }
         if(email){
-            fetch(`http://localhost:5000/user`, {
+            fetch(`https://my-ecommerce-nh.herokuapp.com/user`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

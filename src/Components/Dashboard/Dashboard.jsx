@@ -31,17 +31,17 @@ const Dashboard = () => {
     const filterByPrice = (e) => {
         const price = e.target.value;
         if (price === "0-50") {
-            setPrc(products.filter(product => product.price > 0 && product.price <= 50));
+            setPrc(products.filter(product => (product.price > 0 && product.price <= 50)));
         } else if (price === "50-100") {
-            setPrc(products.filter(product => product.price > 50 && product.price <= 100));
+            setPrc(products.filter(product => (product.price > 50 && product.price <= 100)));
         } else if (price === "100-200") {
-            setPrc(products.filter(product => product.price > 100 && product.price <= 200));
+            setPrc(products.filter(product => (product.price > 100 && product.price <= 200)));
         } else if (price === "200-300") {
-            setPrc(products.filter(product => product.price > 200 && product.price <= 300));
+            setPrc(products.filter(product => (product.price > 200 && product.price <= 300)));
         } else if (price === "300-400") {
-            setPrc(products.filter(product => product.price > 300 && product.price <= 400));
+            setPrc(products.filter(product => (product.price > 300 && product.price <= 400)));
         } else if (price === "400-500") {
-            setPrc(products.filter(product => product.price > 400 && product.price <= 500));
+            setPrc(products.filter(product => (product.price > 400 && product.price <= 500)));
         } else {
             setPrc(products.filter(product => product.price > 500));
         }
