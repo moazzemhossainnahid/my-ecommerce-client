@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Social from './Social';
 import Loader from '../Others/Loader';
@@ -21,7 +21,6 @@ const SignUp = () => {
 
   const [updateProfile, updating, upError] = useUpdateProfile(auth);
 
-  let navigate = useNavigate()
   let location = useLocation();
   let from = location.state?.from?.pathname || "/dashboard";
 
@@ -35,13 +34,11 @@ const SignUp = () => {
           email: user?.user?.email,
         });
         if (data.token) {
-          localStorage.setItem("authorizationToken", data.token);
+          localStorage.setItem("accessToken", data.token);
         }
       })();
-
-      navigate(from, { replace: true });
     }
-  }, [user, from, navigate, updating, name]);
+  }, [user, from, updating, name]);
 
 
   if (loading || updating) {

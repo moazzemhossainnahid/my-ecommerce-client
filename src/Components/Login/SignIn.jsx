@@ -31,7 +31,7 @@ const SignIn = () => {
           email: user?.user?.email,
         });
         if (data.token) {
-          localStorage.setItem("authorizationToken", data.token);
+          localStorage.setItem("accessToken", data.token);
         }
       })();
 
